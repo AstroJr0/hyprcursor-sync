@@ -3,7 +3,7 @@ set -e
 
 # --- Configuration ---
 CURSOR_CONF="$HOME/.config/hypr/cursors.conf"
-SETTINGS="$HOME/.config/gtk-3.0/settings.ini"
+SETTINGS="$HOME/.config/gtk-4.0/settings.ini"
 
 # --- Logic ---
 get_theme() {
@@ -15,8 +15,7 @@ get_theme() {
     fi
 }
 get_size () {
-    if [[ -f "$SETTINGS"]]
-        grep "gtk-cursor-theme-size" $SETTINGS | cut -d'=' -f2
+    grep "gtk-cursor-theme-size" $SETTINGS | cut -d'=' -f2
 }
 
 # Ensure config dir exists
