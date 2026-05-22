@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 set -e
 
-# --- Configuration ---
+# --- Configuration --
 CURSOR_CONF="$HOME/.config/hypr/cursors.conf"
 SETTINGS="$HOME/.config/gtk-4.0/settings.ini"
 
-# --- Logic ---
+# --- Logic --
 get_theme() {
     if [[ -f "$SETTINGS" ]]; then
         # Extract theme name, handling spaces/tabs safely
@@ -32,7 +32,8 @@ env = XCURSOR_SIZE,$SIZE
 EOF
 
 # 2. Update Active Session
-hyprctl setcursor "$THEME" "$SIZE" >/dev/null 2>&1
+# Were forcing the computer to change cursor.
+
 hyprctl setenv XCURSOR_SIZE "$SIZE"
 hyprctl setenv HYPRCURSOR_SIZE "$SIZE"
 
