@@ -70,7 +70,7 @@ No flags. No essays. No PhD required.
 ## For AUR Only
 Hmm, i heard you're too lazy, and you use arch btw.. sure!
 
-![AUR version](https://img.shields.io/aur/version/hyprcursor-sync-git?color=blue&style=for-the-badge) ![AUR license](https://img.shields.io/aur/license/hyprcursor-sync-git?style=for-the-badge) ![Maintainer](https://img.shields.io/badge/maintainer-uvz0-orange?style=for-the-badge)
+![AUR version](https://img.shields.io/aur/version/hyprcursor-sync-git?color=blue&style=for-the-badge) ![AUR license](https://img.shields.io/aur/license/hyprcursor-sync-git?style=for-the-badge) ![Maintainer](https://img.shields.io/badge/maintainer-AstroJr0-orange?style=for-the-badge)
 
 heres the command:
 ```bash
