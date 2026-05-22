@@ -33,7 +33,7 @@ EOF
 
 # 2. Update Active Session
 # Were forcing the computer to change cursor.
-
+hyprctl setcursor "$THEME" "$SIZE" >/dev/null 2>&1
 hyprctl setenv XCURSOR_SIZE "$SIZE"
 hyprctl setenv HYPRCURSOR_SIZE "$SIZE"
 
