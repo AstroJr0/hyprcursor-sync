@@ -2,7 +2,7 @@
 set -e
 
 # --- Configuration --
-CURSOR_CONF="$HOME/.config/hypr/cursors.conf"
+CURSOR_CONF="$HOME/.config/hypr/cursors.lua"
 SETTINGS="$HOME/.config/gtk-4.0/settings.ini"
 
 # --- Logic --
@@ -23,20 +23,20 @@ mkdir -p "$(dirname "$CURSOR_CONF")"
 THEME=$(get_theme || echo "Bibata-Modern-Ice")
 SIZE=$(get_size || echo "24")
 
-# 1. Update Persistent Config
+# 1. Update Persistent Config 
 cat > "$CURSOR_CONF" <<EOF
-env = HYPRCURSOR_THEME,$THEME
-env = HYPRCURSOR_SIZE,$SIZE
-env = XCURSOR_THEME,$THEME
-env = XCURSOR_SIZE,$SIZE
+hl.env("HYPRCURSOR_THEME", "$THEME")
+hl.env("HYPRCURSOR_SIZE", $SIZE)
+hl.env("XCURSOR_THEME", "$THEME")
+hl.env("XCURSOR_SIZE", $SIZE)
 EOF
 
 # 2. Update Active Session
-# Were forcing the computer to change cursor.
 hyprctl setcursor "$THEME" "$SIZE" >/dev/null 2>&1
 hyprctl setenv XCURSOR_SIZE "$SIZE"
 hyprctl setenv HYPRCURSOR_SIZE "$SIZE"
 
-gsettings set org.gnome.desktop.interface cursor-theme '$THEME'
+# Notice the double quotes here
+gsettings set org.gnome.desktop.interface cursor-theme "$THEME"
 gsettings set org.gnome.desktop.interface cursor-size $SIZE
 echo "Cursor updated to: $THEME, $SIZE"
