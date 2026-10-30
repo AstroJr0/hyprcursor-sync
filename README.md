@@ -36,8 +36,8 @@ yay -S hyprcursor-sync
 PRs welcome.  
 If it breaks, fix it.  
 If it works, star it ⭐  
-If you hate it, fork it 😈
+If you hate it, fork it 
 
 ## 📜 License
-MIT — do whatever, just don’t blame me if you nuke your cursor.
+**MIT**. do whatever, just don’t blame me if you nuke your cursor.
 ![AUR license](https://img.shields.io/aur/license/hyprcursor-sync-git?style=for-the-badge)
